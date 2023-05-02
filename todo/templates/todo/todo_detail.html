@@ -1,0 +1,34 @@
+{% extends "todo/base.html" %}
+
+{% block title %}Todo: {{ post.title }}{% endblock title %}
+{% block content_title %}Task: {{ post.title }}{% endblock content_title %}
+{% block content %}{{ post.content }}{% endblock content %}
+{% block content_status %}
+{% if post.status == 1 %}
+    Status: <b>Done</b>
+<hr>
+{% else %}
+    Status: <b>Yet to be done</b>
+<hr>
+{% endif %}
+{% endblock content_status %}
+{% block back %}<a href={% url 'all-posts' %}>Go back to all the todos</a><hr>{% endblock back%}
+{% block form%}
+Add comment
+    <form action="" method=POST>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+<hr>
+{% endblock form%}
+{% block comment%}
+    {% for comment in comments %}
+        <h3>{{ comment.name }}</h3>
+        <h3>{{ comment.email }}</h3>
+        <h3>{{ comment.body }}</h3>
+        <hr>
+    {% endfor %}
+{% endblock comment%}
+
+

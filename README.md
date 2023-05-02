@@ -1,0 +1,8 @@
+- Creating project and app
+- Registering models in admin.py
+- Adding data via /admin
+- Mapping URLs to views
+- Adding form-entry in models.py
+- Creating forms.py
+- Integrating form in views.py and template
+- Displaying data in views based on templates (no CSS)

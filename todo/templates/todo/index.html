@@ -1,0 +1,6 @@
+{% extends "todo/base.html" %}
+
+{% block title %}All my todos{% endblock title %}
+{% block content_title %}This is all the todos{% endblock content_title %}
+<ul>{% block content %}{% for post in posts %}<li><a href={% url 'detail-view' post.id %}>{{ post.title }}</a></li>{% endfor %}{% endblock content %}</ul>
+

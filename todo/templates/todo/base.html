@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <h3>{% block content_title %}{% endblock content_title %}</h3>
+    <p>{% block content %}{% endblock content %}</p>
+    {% block content_status %}{% endblock content_status%}
+    <h3>{% block back %}{% endblock back%}</h3>
+    <h3>{% block form%}{% endblock form %}</h3>
+    <h3>{% block comment %}{% endblock comment %}</h3>
+
+  </body>
+</html>
