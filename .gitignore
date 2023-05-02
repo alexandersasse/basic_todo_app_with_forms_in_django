@@ -1,2 +1,3 @@
 /mysite/.env
 /db.sqlite3
+/env
